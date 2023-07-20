@@ -1,0 +1,34 @@
+- Start with totalPerim = 0
+- Start with prevPt = last point
+
+Find distance between prevPt and currPt. It is currentDistance.
+Update totalPerim = totalPerim + currentDistance
+Update prevPt to be the currPt.
+
+Find distance between prevPt and currPt. It is currentDistance.
+Update totalPerim = totalPerim + currentDistance
+Update prevPt to be the currPt.
+
+Find distance between prevPT and currPt. It is currentDistance.
+Update totalPerim = totalPerim + currentDistance
+Update prevPt to be the currPt.
+
+Find distance between prevPt and 4th point. It is currentDistance.
+Update totalPerim = totalPerim + currentDistance
+Update prevPT to be the currPt.
+
+- Answer is totalPerim.
+
+**********************************************************
+
+
+- totalPerim = 0
+
+- prevPt = last point
+
+- For each currPt in the shape,
+	- Find distance between prevPT and currPt; name it currDist
+	- Update totalPerim = totalPerim + currDist
+	- Update prevPt to be the currPt
+
+- totalPerim is answer
