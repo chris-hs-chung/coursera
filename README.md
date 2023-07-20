@@ -1,7 +1,10 @@
 # coursera
 Coursera courses and specializations I have taken and have yet to complete.   
 
-**disclaimer** The files contain solutions. So if you're planning on taking these courses, don't look 🤷‍♂️.
+**disclaimer** The files contain solutions. So if you're planning on taking these courses, don't look 🤷‍♂️.  
+<br>
+
+***  
 
 [Object Oriented Programming in Java Specialization](https://www.coursera.org/specializations/object-oriented-programming)  
 
