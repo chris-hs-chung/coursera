@@ -1,5 +1,5 @@
 # coursera
-Coursera courses and specializations I have taken.  
+Coursera courses and specializations I have taken and have yet to complete.   
 
 [Object Oriented Programming in Java Specialization](https://www.coursera.org/specializations/object-oriented-programming)  
 
