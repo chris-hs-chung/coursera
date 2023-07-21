@@ -6,7 +6,7 @@
  * @version (7/21/2023)
  */
 public class Part3 {
-    //
+    // Find 2 occurences in a string
     public boolean twoOccurrences (String stringa, String stringb) {
     // return true if stringa occurs atleast twice in stringb
         int count = 0;
@@ -25,7 +25,7 @@ public class Part3 {
         }
     }
     
-    //
+    // test
     public void testing () {
         System.out.println("a in banana"+ twoOccurrences("a", "banana ") + "\n"); // true
         System.out.println("an in banana"+ twoOccurrences("an", "banana ") + "\n"); // true

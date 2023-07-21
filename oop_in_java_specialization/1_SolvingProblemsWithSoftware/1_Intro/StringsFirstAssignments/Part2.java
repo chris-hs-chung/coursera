@@ -40,7 +40,7 @@ public class Part2 {
         String startCodon = "ATG";
         String stopCodon = "TAA";
         
-        String a = "ATATATGGGGGGAAATAAGGGGAAA";
+        String a = "AAATGCCCTAACTAGATTAAGAAACC";
         System.out.println("Test a");
         System.out.println(a);
         System.out.println(findSimpleGene(a, startCodon, stopCodon));

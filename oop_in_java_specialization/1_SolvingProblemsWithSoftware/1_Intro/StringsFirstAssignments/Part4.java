@@ -22,8 +22,8 @@ public class Part4 {
             lowerCasedS = s.toLowerCase();
             linkIndex = lowerCasedS.indexOf(linkOfInterest);
             if (linkIndex != -1) {
-                start = lowerCasedS.lastIndexOf("\"", linkIndex);
-                end = lowerCasedS.indexOf("\"", linkIndex);
+                start = s.lastIndexOf("\"", linkIndex);
+                end = s.indexOf("\"", linkIndex);
                 url = s.substring(start, end + 1);
                 System.out.println(url);
             }
