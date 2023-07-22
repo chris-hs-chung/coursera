@@ -6,7 +6,7 @@ Coursera courses and specializations I have taken and have yet to complete.
 
 ***  
 
-[Java Programming and Software Engineering Fundamentals Specialization]([https://www.coursera.org/specializations/object-oriented-programming](https://www.coursera.org/specializations/java-programming))  
+[Java Programming and Software Engineering Fundamentals Specialization](https://www.coursera.org/specializations/java-programming))  
 
 * Course 1 : [Programming Foundations with JavaScript, HTML and CSS](https://www.coursera.org/learn/duke-programming-web?specialization=java-programming)
 
