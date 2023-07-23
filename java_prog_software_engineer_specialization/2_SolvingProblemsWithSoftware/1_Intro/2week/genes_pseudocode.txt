@@ -1,0 +1,71 @@
+1. Find first occurence of "ATG" at startIndex.
+
+2. Starting from startIndex + 3, find index of "TAA" and call it currIndex.
+
+3. Check if (currIndex - startIndex) is a multiple of 3.
+
+4. If not, them start from (currIndex + 1), to find the next "TAA", and update it to currIndex. 
+
+5. Check if (currIndex - startIndex) is a multiple of 3.
+
+6. It was, so everything in between is the gene.
+
+********************************************************************
+
+1. Find first occurence of "ATG" at startIndex.
+
+If startIndex is -1, then return empty string.
+
+2. Starting from startIndex + 3, find index of "TAA" and call it currIndex.
+
+3. As long as currIndex is not -1
+	4. Check if (currIndex - startIndex) is a multiple of 3.
+		5. If so, then startIndex to currIndex + 3 is answer.
+		5. If not, then start at currIndex + 1, and update currIndex for the next "TAA".
+
+**********************************************************************
+Abstraction of finding the stop codon
+
+1. Find first occurence of "ATG" at startIndex.
+
+2. If startIndex is -1, then return empty string.
+
+3. findStopCodon(dnaStr, startIndex, "TAA") =  taaIndex
+    1. Starting from startIndex + 3, find index of "TAA" and call it currIndex.
+    2. As long as currIndex is not -1
+        3. Check if (currIndex - startIndex) is a multiple of 3.
+            4. If so, then startIndex to currIndex + 3 is answer.
+            4. If not, then start at currIndex + 1, and update currIndex for the next "TAA".
+
+findStopCodon(dnaStr, startIndex, "TAG") = tagIndex
+
+findStopCodon(dnaStr, startIndex, "TGA") = tgaIndex
+
+Take the smallest of taaIndex, tagIndex, tgaIndex = minIndex
+
+The answer is the text from startIndex to minIndex + 3
+
+************************************************************************
+
+Abstraction of finding the stop codon
+
+1. Find first occurence of "ATG" at startIndex.
+
+2. If startIndex is -1, then return empty string.
+
+3. findStopCodon(dnaStr, startIndex, "TAA") =  taaIndex
+    1. Find stopCodon starting from (startIndex + 3), call the result currIndex
+    2. As long as currIndex is not -1
+        3. Check if (currIndex - startIndex) is a multiple of 3.
+            4. If so, then startIndex to currIndex + 3 is answer.
+            4. If not, then start at currIndex + 1, and update currIndex for the next stopCodon.
+
+findStopCodon(dnaStr, startIndex, "TAG") = tagIndex
+
+findStopCodon(dnaStr, startIndex, "TGA") = tgaIndex
+
+Take the smallest of taaIndex, tagIndex, tgaIndex = minIndex
+
+If minIndex is dnaStr.length(), then the answer is empty string.
+
+The answer is the text from startIndex to minIndex + 3
