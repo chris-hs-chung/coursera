@@ -1,5 +1,6 @@
 
 /**
+ * Part 1
  * A simple version of finding a gene in a dna sequence.
  * 
  * @author chris

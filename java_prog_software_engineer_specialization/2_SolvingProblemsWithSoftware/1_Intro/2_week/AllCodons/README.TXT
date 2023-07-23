@@ -4,9 +4,12 @@ Tell the reader (someone who does not know anything about this project)
 all he/she needs to know. The comments should usually include at least:
 ------------------------------------------------------------------------
 
-PROJECT TITLE: Coding three stop codons
-PURPOSE OF PROJECT: Follow along code for lecture
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
+PROJECT TITLE: 		Finding a gene with three different codons
+PURPOSE OF PROJECT: 	Code from lecture
+VERSION or DATE:		7/23/2023
+HOW TO START:		use BlueJ
+AUTHORS:		Chris
 USER INSTRUCTIONS:
+
+DNA can have three stop codons: TAA, TGA, and TAG.
+

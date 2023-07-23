@@ -1,10 +1,12 @@
 
 /**
- * Part 2
+ * Part 3
  * Find gene with different stop codons.
+ * And adding short circuit evaluations if there are no valid stop codons.
+ * In the findStopCodon, change return to -1, not dna.length()
  * 
  * @author (chris) 
- * @version (a version number or a date)
+ * @version 7/26/2023
  */
 public class AllCodons {
     //
@@ -13,9 +15,6 @@ public class AllCodons {
         // Return index of the stop codon.
 
         int currIndex = dna.indexOf(stopCodon, startIndex + 3);
-        if (currIndex == -1) {
-            return currIndex;
-        }
 
         while (currIndex != -1) {
             if ((currIndex - startIndex) % 3 == 0) {
@@ -25,7 +24,7 @@ public class AllCodons {
             }
         }
 
-        return dna.length();
+        return -1;
     }
     //
     //
@@ -42,11 +41,23 @@ public class AllCodons {
         int tagIndex = findStopCodon(dna, startIndex, "TAG");
         int tgaIndex = findStopCodon(dna, startIndex, "TGA");
 
-        // find the min among the stop codons = minIndex
-        int temp = Math.min(taaIndex, tagIndex);
-        int minIndex = Math.min(temp, tgaIndex);
+        // int temp = Math.min(taaIndex, tagIndex);
+        // int minIndex = Math.min(temp, tgaIndex); This can't be used because -1 means there is no stop codon.
 
-        if (minIndex == dna.length()) {
+        // Find the minIndex
+        int minIndex == -1;
+        if (taaIndex == -1 || (tgaIndex != -1 && tgaIndex < taaIndex)) {
+            minIndex = tgaIndex;
+        } else {
+            minIndex = taaIndex;
+        }
+
+        if (minIndex == -1 || (tagIndex != -1 && tagIndex < minIndex)) {
+            minIndex = tagIndex;
+        }
+
+        // If there is no stop codon, then return empty string. Else, return gene.
+        if (minIndex == -1) {
             return "";
         } else {
             return dna.substring(startIndex, minIndex + 3);
