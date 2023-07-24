@@ -1,3 +1,4 @@
+-- part 1--
 Find first occurence of start codon = startIndex
 currIndex = first occurence of stop codon
 while stop codon exists
@@ -6,3 +7,16 @@ while stop codon exists
         if not, update currIndex to start at currIndex + 3;
 
 if no stop codon, then return length of dna
+
+
+
+-- Part 2 --
+
+Start count at 0.
+Check if string-a occurs. If not, return 0.
+
+while there is an occurence of string-a
+    - add to count
+    - 
+
+
