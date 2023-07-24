@@ -1,0 +1,8 @@
+Find first occurence of start codon = startIndex
+currIndex = first occurence of stop codon
+while stop codon exists
+    check if gene is multiple of three --> (currIndex - startIndex) % 3 == 0
+        if so, return index
+        if not, update currIndex to start at currIndex + 3;
+
+if no stop codon, then return length of dna
