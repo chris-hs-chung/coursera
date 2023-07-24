@@ -8,7 +8,7 @@
  * @author (chris) 
  * @version 7/26/2023
  */
-public class AllCodons {
+public class AllCodonsAnd {
     //
     //
     public int findStopCodon (String dna, int startIndex, String stopCodon) {
@@ -45,7 +45,7 @@ public class AllCodons {
         // int minIndex = Math.min(temp, tgaIndex); This can't be used because -1 means there is no stop codon.
 
         // Find the minIndex
-        int minIndex == -1;
+        int minIndex;
         if (taaIndex == -1 || (tgaIndex != -1 && tgaIndex < taaIndex)) {
             minIndex = tgaIndex;
         } else {

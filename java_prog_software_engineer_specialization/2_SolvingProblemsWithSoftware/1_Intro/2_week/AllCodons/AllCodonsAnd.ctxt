@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=AllCodonsAnd
+comment0.text=\r\n\ Part\ 3\r\n\ Find\ gene\ with\ different\ stop\ codons.\r\n\ And\ adding\ short\ circuit\ evaluations\ if\ there\ are\ no\ valid\ stop\ codons.\r\n\ In\ the\ findStopCodon,\ change\ return\ to\ -1,\ not\ dna.length()\r\n\ \r\n\ @author\ (chris)\ \r\n\ @version\ 7/26/2023\r\n
+comment1.params=dna\ startIndex\ stopCodon
+comment1.target=int\ findStopCodon(java.lang.String,\ int,\ java.lang.String)
+comment2.params=dna
+comment2.target=java.lang.String\ findGene(java.lang.String)
+comment3.params=
+comment3.target=void\ testGene()
+numComments=4
