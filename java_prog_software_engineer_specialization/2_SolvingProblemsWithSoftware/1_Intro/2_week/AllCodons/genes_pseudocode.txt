@@ -74,7 +74,7 @@ The answer is the text from startIndex to minIndex + 3
 
 ************************************************************************
 
-What if there are no valid stop codons?
+***What if there are no valid stop codons?
 
 1. Find first occurence of "ATG" at startIndex.
 
@@ -102,3 +102,25 @@ method - findStopCodon(dnaStr, startIndex, stopCodon)
 
 11. If  minIndex is -1, then answer is "" 
 12. else, answer is the text from startIndex to minIndex + 3
+
+************************************************************************
+
+*** Find multiple genes in DNA, not just one.
+
+1. Set startIndex to 0
+2. As long as there are more genes after startIndex
+    3. Find the next gene after startIndex*
+    4. Print the gene*
+    5. Set startIndex to just after the gene.
+
+** this doesn't work because
+
+************************************************************************
+*** Find multiple genes in DNA, with break
+
+1. Set startIndex to 0
+2. Repeat the follow steps. *
+    3. Find the next gene after startIndex 
+    4. If no gene is found, then leave the loop.* break;
+    5. Print the gene
+    6. Set startIndex to just after the gene.

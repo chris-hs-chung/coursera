@@ -105,7 +105,7 @@ public class Part3 {
     printAllGenes(dna);
     System.out.println("count= " + countGenes(dna));
     
-    dna = "ATGTAAGATGCCCTAGTATGTAGGATGCCCTGAT";
+    dna = "AATGCTAACTAGCTGACTAAT";
     System.out.println("dna= " + dna);
     printAllGenes(dna);
     System.out.println("count= " + countGenes(dna));
