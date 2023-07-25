@@ -159,6 +159,7 @@ public class AllGenesStorage {
     // ---------------------------------------------------
     // Part 3: Process all the genes in a storage resource
     public void processGenes(StorageResource sr) {
+        int count=0;
         int countLonger9 =0;
         int countCG = 0;
         String longestGene = "";
@@ -167,6 +168,7 @@ public class AllGenesStorage {
         int sLength = 0;
         
         for (String s : sr.data()) {
+            count++;
             sLength = s.length(); 
             if (sLength > 9) {
                 System.out.println("Longer than 9 char: )" + s);
@@ -185,17 +187,22 @@ public class AllGenesStorage {
                 countLongerThan60++;
             }
         }
+        System.out.println("Total number of genes: " + count);
         System.out.println("Count longer than 9: " + countLonger9);
         System.out.println("Count C-G ratio higher than .35: " + countCG);
         System.out.println("Count longer than 60: " + countLongerThan60);
+        System.out.println("Length of longest gene: " + longestLength);
     }
     //
     public void testProcessGenes() {
-        FileResource fr = new FileResource("GRch38dnapart.fa");
-        String dna = fr.asString();
+        FileResource fr = new FileResource();
+        String dna = fr.asString().toUpperCase();
+        
         StorageResource sr = new StorageResource();
         sr = getAllGenes(dna);
         
         processGenes(sr);
+        
+        System.out.println("CTG count= " + countCTG(dna));
     }
 }
