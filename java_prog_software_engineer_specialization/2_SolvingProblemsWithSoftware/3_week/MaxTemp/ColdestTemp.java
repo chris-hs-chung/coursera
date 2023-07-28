@@ -1,10 +1,39 @@
 import edu.duke.*;
 import org.apache.commons.csv.*;
 import java.io.*;
-
+// Programming exercise: Parsing Weather Data
 public class ColdestTemp {
-    public CSVRecord lowestHumidityInFile (CSVParser parser){
+    public void lowestHumidityInManyFiles(){
+        // part 4. get row with lowest humidity amond many files
         
+    }
+    
+    public CSVRecord lowestHumidityInFile (CSVParser parser){
+        // part 3. return row with lowest humidity
+        CSVRecord humidityRow = null;
+        for (CSVRecord currentRow : parser) {
+            if (humidityRow == null) {
+                humidityRow = currentRow;
+            }
+            
+            int currentHumidity = Integer.parseInt(currentRow.get("Humidity"));
+            int lowestHumidity = Integer.parseInt(humidityRow.get("Humidity"));
+            if (currentHumidity < lowestHumidity) {
+                humidityRow = currentRow;
+            }
+        }
+        
+        return humidityRow;
+    }
+    
+    public void testLowestHumidityInFile() {
+        // part 3. test
+        FileResource fr = new FileResource();
+        CSVParser parser = fr.getCSVParser();
+        CSVRecord csv = lowestHumidityInFile(parser);
+        
+        System.out.println("\n    Lowest humidity= " + csv.get("Humidity"));
+        System.out.println("date= " + csv.get("DateUTC"));
     }
     
     public String fileWithColdestTemperature (){
