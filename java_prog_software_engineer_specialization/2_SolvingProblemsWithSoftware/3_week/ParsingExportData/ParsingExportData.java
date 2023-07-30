@@ -79,11 +79,11 @@ public class ParsingExportData {
             
             System.out.println("part 3");
             parser = fr.getCSVParser();
-            listExportersTwoProducts(parser, "gold", "diamonds");
+            listExportersTwoProducts(parser, "cotton", "flowers");
             
             System.out.println("part 4");
             parser = fr.getCSVParser();
-            System.out.println("Count= " + numberOfExporters(parser, "gold"));
+            System.out.println("Count= " + numberOfExporters(parser, "cocoa"));
             
             System.out.println("part 5");
             parser = fr.getCSVParser();
